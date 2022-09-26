@@ -4,13 +4,9 @@ let containerBuyCart = document.querySelector(".card-items");
 let priceTotal = document.querySelector(".price-total");
 let amountProduct = document.querySelector(".count-product");
 
-
-
 let buyThings = [];
 let totalCard = 0;
 let countProduct = 0;
-
-// localStorage
 
 
 
@@ -81,7 +77,6 @@ function readTheContent(product) {
     countProduct++;
   }
   loadHtml();
-  
 }
 
 function loadHtml() {
@@ -106,10 +101,22 @@ function loadHtml() {
     priceTotal.innerHTML = totalCard;
 
     amountProduct.innerHTML = countProduct;
+    sincronizationStorage();
   });
 }
 function clearHtml() {
   containerBuyCart.innerHTML = "";
 }
 
+function sincronizationStorage() {
+  localStorage.setItem("cartProducts", JSON.stringify(buyThings));
+ 
+}
 
+eventListeners();
+function eventListeners() {
+  document.addEventListener("DOMContentLoaded", () => {
+    buyThings = JSON.parse(localStorage.getItem("cartProducts")) || [];   
+    loadHtml();
+  });
+}

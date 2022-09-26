@@ -171,21 +171,19 @@ const productsData = [
   },
 ];
 
-// Para hacer la paginacion del ver mas
-// Misma funcion del proyecto Crypto
+ 
 function splitProducts(size) {
-  // Declaramos un array vacio e indice de for
+  
   let chunk = [];
-  // Loop que recorre el array
+  
   for (let i = 0; i < productsData.length; i += size)
-    // Push al array el tramo desde el indice del loop hasta el valor size + el indicador
+ 
     chunk.push(productsData.slice(i, i + size));
 
-  // Devolvemos el array
+  
   return chunk;
 }
 
-// Objeto para dividir los productos en arrays de 6 productos y manejar la paginacion
 const allProducts = {
   productList: splitProducts(6),
   next: 1,
