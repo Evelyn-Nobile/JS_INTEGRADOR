@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url(../assets/fonts/Inconsolata-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Inconsolata";
+}
+
+:root {
+  --cream: #ffffbf;
+  --grey: #454546;
+  --lightpink: #ff40a0;
+  --darkpink: #cc0066;
+}
+@media screen and (min-width: 993px) {
+  body {
+    font-family: "Inconsolata";
+    font-weight: 100;
+    display: flex;
+    background-color: var(--cream);
+  }
+
+  .main__title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    color: var(--grey);
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .signup-form input {
+    height: 2rem;
+    text-transform: uppercase;
+    color: var(--grey);
+    width: 25rem;
+  }
+  input::placeholder {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+  .signup,
+  .home {
+    margin-bottom: 5rem;
+  }
+  .form-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .form-text a {
+    text-decoration: none;
+    color: var(--grey);
+  }
+
+  .form-text a:hover {
+    color: var(--darkpink);
+  }
+  .signup-submit {
+    border: 1px solid var(--grey);
+    background: transparent;
+    color: var(--grey);
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 20rem;
+    cursor: pointer;
+    box-shadow: 2px 0px 4px 0px var(--grey);
+    letter-spacing: 2px;
+  }
+
+  .signup-submit:hover {
+    transform: scale(0.9);
+    transition: all ease 0.8;
+  }
+  .sign-username,
+  .sign-password,
+  .sign-email {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--grey);
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  body {
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    font-family: "Bree Serif", serif;
+    font-weight: 100;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--cream);
+  }
+  .form-container img {
+    height: 250px;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .sign-form input {
+    height: 2rem;
+    text-transform: uppercase;
+  }
+  .signup-form input:focus {
+    color: var(--darkpink);
+  }
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .form-text a {
+    text-decoration: none;
+    color: var(--grey);
+  }
+
+  .form-text a:hover {
+    color: var(--darkpink);
+  }
+  .signup-submit {
+    border: 1px solid var(--grey);
+    background: transparent;
+    color: var(--grey);
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 10rem;
+    cursor: pointer;
+    box-shadow: 2px 0px 4px 0px var(--grey);
+  }
+  .sign-username,
+  .sign-password,
+  .sign-email {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--grey);
+
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    font-family: "Bree Serif", serif;
+    font-weight: 100;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--cream);
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .sign-form input {
+    height: 2rem;
+    text-transform: uppercase;
+  }
+  .signup-form input:focus {
+    color: var(--darkpink);
+  }
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .form-text a {
+    text-decoration: none;
+    color: var(--grey);
+  }
+
+  .form-text a:hover {
+    color: var(--darkpink);
+  }
+  .signup-submit {
+    border: 1px solid var(--grey);
+    background: transparent;
+    color: var(--grey);
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 10rem;
+    cursor: pointer;
+    box-shadow: 2px 0px 4px 0px var(--grey);
+  }
+  .sign-username,
+  .sign-password,
+  .sign-email {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--grey);
+
+    outline: none;
+  }
+}

@@ -1,0 +1,660 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url(../assets/fonts/Inconsolata-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Bold.ttf);
+}
+* {
+  box-sizing: border-box;
+  background-color: var(--cream);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "inconsolata";
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* variables */
+:root {
+  --cream: #ffffbf;
+  --grey: #454546;
+  --lightpink: #ff40a0;
+  --darkpink: #cc0066;
+}
+
+.header__tittle {
+  text-align: center;
+  font-size: 2.5em;
+
+  color: var(--grey);
+  font-family: "Poppins";
+}
+
+/* slider */
+.container-slider {
+  margin: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  height: 300px;
+  margin-left: -100%;
+  position: relative;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__section {
+  width: 100%;
+  position: relative;
+}
+.slider__img {
+  padding-top: 70px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+.slider__btn:hover {
+  background: #fff;
+}
+.slider__btn--left {
+  left: 10px;
+}
+.slider__btn--right {
+  right: 10px;
+}
+
+.main__header {
+  padding: 0 20px;
+}
+.main__nav {
+  display: none;
+}
+.main__nav.visible {
+  display: block;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+.main-header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 25px;
+}
+.main-header__container h3 {
+  color: var(--grey);
+  text-align: center;
+  width: 300px;
+}
+.icon-menu {
+  font-size: 1.5em;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #cdcdcd;
+  margin-bottom: 5px;
+}
+
+.header__text {
+  color: var(--grey);
+}
+
+/* pruducts */
+.main__title {
+  text-align: center;
+}
+
+.menu__link {
+  color: var(--darkpink);
+}
+/* cart */
+.cart__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+.cart {
+  height: 40px;
+  width: 40px;
+}
+.cart-products {
+  position: absolute !important;
+  z-index: 2;
+  right: 10px;
+  padding: 0 18px;
+  display: none;
+  min-width: 290px;
+  width: 200px;
+}
+.cart-products .item img {
+  width: 60px;
+  height: 60px;
+}
+.cart-products .item {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2px var(--darkpink);
+}
+.cart-products .item .item-content {
+  margin: 0 19px;
+  width: 80px;
+}
+.cart-products .item .item-content h5 {
+  margin: 0;
+  font-size: 15px;
+
+  font-family: "inconsolata";
+}
+.cart-products .item .item-content h6 {
+  margin: 0;
+  font-size: 13px;
+
+  font-family: "inconsolata";
+}
+.cart-products .item span {
+  background-color: var(--darkpink);
+  padding: 0px 5px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: "inconsolata";
+  cursor: pointer;
+}
+.cart-products h3 {
+  margin-bottom: 0.5rem;
+}
+.cart-products .item .item-content h5.cart-price {
+  font-weight: 100;
+}
+/*stye to btn close*/
+p.close-btn {
+  top: -4px;
+  right: 6px;
+  cursor: pointer;
+  color: var(--darkpink);
+}
+.count-product {
+  position: absolute;
+  top: 45%;
+  left: 67%;
+  color: var(--darkpink);
+  font-size: 1.2rem;
+ 
+}
+/* categorias */
+.container h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+.container-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.category {
+  background: var(--cream);
+  border: thin solid var(--darkpink);
+  padding: 10px 10px;
+  color: var(--grey);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.btn-add-cart {
+  color: var(--cream);
+  padding: 10px 10px;
+  border: 3px solid var(--lightpink);
+  border-radius: 7px;
+  background-color: var(--grey);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.btn-buy {
+  color: var(--grey);
+  padding: 5px 5px;
+  border: 1px solid var(--lightpink);
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.btn-add-cart:hover {
+  background-color: var(--darkpink);
+}
+.btn-buy:hover {
+  background-color: var(--lightpink);
+}
+.active {
+  background: var(--lightpink);
+}
+
+.category:hover {
+  background-color: var(--lightpink);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.product__img {
+  width: 230px;
+  height: 350px;
+  object-fit: cover;
+  margin-left: 1rem;
+}
+.product__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.product__price, p {
+  color: var(--lightpink);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.product:hover i {
+  color: var(--darkpink);
+}
+
+.product i {
+  margin-top: 10px;
+  display: block;
+}
+.product__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__btn {
+  background-color: var(--lightpink);
+  color: var(--cream);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Inconsolata";
+  border-radius: 20px;
+}
+.product__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* fin products
+
+
+about section */
+.container-about {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 5rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about i {
+  font-size: 2em;
+  color: #333;
+  padding: 20px 0;
+}
+
+.about_txt {
+  width: 250px;
+}
+
+.copy {
+  color: var(--grey);
+}
+.contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--grey);
+  padding-top: 2rem;
+}
+.ubicacion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ubicacion p {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.callnumber {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.callnumber p {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+/*Estilos para tablet*/
+@media screen and (min-width: 768px) {
+  .slider {
+    height: 400px;
+  }
+
+  .container-about {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* footer */
+  .footer__section {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+
+/*Estilos para web*/
+
+@media screen and (min-width: 993px) {
+  .icon-menu {
+    display: none;
+  }
+  .main__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .main-header__title {
+    width: 100%;
+    font-size: 4em;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .main-header__link {
+    margin-bottom: 20px;
+  }
+  .main-header__btn {
+    width: 130px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .menu__link {
+    color: #333;
+  }
+  .menu__link:hover {
+    background: #333;
+    color: white;
+  }
+
+  .main-header__cart-btn {
+    color: var(--darkpink);
+  }
+  .main__title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    color: var(--grey);
+  }
+
+  .main-header__container h3 {
+    color: var(--grey);
+    text-align: center;
+    width: 100%;
+  }
+  .slider {
+    height: 800px;
+  }
+  .container-products {
+    max-width: 800px;
+    display: flex;
+  }
+
+  .product,
+  .product_no-stock,
+  .product_toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .product__img {
+    width: 150px;
+    height: 250px;
+    margin-right: 3rem;
+  }
+  .product__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .product__price {
+    color: var(--lightpink);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .product_toggle.product__price {
+    color: var(--lightpink);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .product i {
+    margin-top: 20px;
+    display: block;
+  }
+
+  .product,
+  .product_no-stock {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  .product_no-stock:before {
+    content: "Sin Stock";
+    background: var(--darkpink);
+    padding: 10px;
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: rotate(-90deg);
+    color: white;
+  }
+
+  .product_no-stock {
+    cursor: not-allowed;
+  }
+
+  /* toggle products
+  .product__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+  .product__btn {
+    background-color: var(--lightpink);
+    color: var(--cream);
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Inconsolata";
+    border-radius: 20px;
+  }
+  .product_toggle {
+    display:none;
+  }
+
+  .product_toggle.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  } */
+
+  .contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--grey);
+    padding-top: 2rem;
+  }
+  .ubicacion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ubicacion p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .callnumber {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .callnumber p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .contact img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+}

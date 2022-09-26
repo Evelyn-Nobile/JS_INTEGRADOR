@@ -1,0 +1,355 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url(../assets/fonts/Inconsolata-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Bold.ttf);
+}
+* {
+  box-sizing: border-box;
+  background-color: var(--cream);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "inconsolata";
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* variables */
+:root {
+  --cream: #ffffbf;
+  --grey: #454546;
+  --lightpink: #ff40a0;
+  --darkpink: #cc0066;
+}
+.header__tittle {
+  text-align: center;
+  font-size: 2.5em;
+
+  color: var(--grey);
+  font-family: "Poppins";
+}
+
+
+
+/*Estilos para web*/
+
+@media screen and (min-width: 993px) {
+  .icon-menu {
+    display: none;
+  }
+  .main__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .main-header__title {
+    width: 100%;
+    font-size: 4em;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .main-header__link {
+    margin-bottom: 20px;
+  }
+  .main-header__btn {
+    width: 130px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .menu__link {
+    color: #333;
+  }
+  .menu__link:hover {
+    background: #333;
+    color: white;
+  }
+
+  .main-header__cart-btn:hover {
+    cursor: pointer;
+  }
+
+  /* .main-header__cart-btn-container {
+    display: none;
+  } */
+  .main__title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    color: var(--grey);
+  }
+
+  .main-header__container h3 {
+    color: var(--grey);
+    text-align: center;
+    width: 100%;
+  }
+  .slider {
+    height: 800px;
+  }
+  .container h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5rem;
+  }
+  .category {
+    background: var(--cream);
+    border: thin solid var(--darkpink);
+    padding: 25px;
+    color: var(--grey);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-family: "Inconsolata";
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .active {
+    background: var(--lightpink);
+  }
+
+  .category:hover {
+    background-color: var(--lightpink);
+  }
+  .container-products {
+    max-width: 800px;
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .product__img {
+    width: 150px;
+    height: 250px;
+    margin-right: 3rem;
+  }
+  .product__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .product__price, p {
+    color: var(--lightpink);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* toggle products */
+
+  .product__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+  .product__btn {
+    background-color: var(--lightpink);
+    color: var(--cream);
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Inconsolata";
+    border-radius: 20px;
+  }
+  .product__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+  .main-header__user-btn-container i {
+    position: absolute;
+    color: var(--grey);
+    top: 5px;
+    left: 10%;
+    max-width: 453px;
+    min-height: 50%;
+    padding-top: 27px;
+    padding-left: 19px;
+    padding-right: 19px;
+    font-size: 1.5rem;
+  }
+  /* cart */
+  .cart {
+    width: 39px;
+    height: 38px;
+    position: absolute;
+    top: 25px;
+    left: 85%;
+  }
+  .cart-products {
+    position: absolute !important;
+    top: 82px;
+    z-index: 99;
+    right: 25px;
+    padding: 0 18px;
+    display: none;
+    min-width: 290px;
+    width: 200px;
+  }
+
+  .cart:hover {
+    margin-bottom: 16px;
+    transition-duration: 0.5s;
+  }
+
+  /*float cart*/
+  .cart-products .item img {
+    width: 115px;
+  }
+
+  .cart-products .item {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px var(--darkpink);
+  }
+  .cart-products .item .item-content {
+    margin: 0 19px;
+    width: 201px;
+  }
+  .cart-products .item .item-content h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "inconsolata";
+  }
+  .cart-products .item .item-content h6 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "inconsolata";
+  }
+  .cart-products .item span {
+    background-color: var(--darkpink);
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: "inconsolata";
+    cursor: pointer;
+  }
+  .cart-products h3 {
+    margin-bottom: 1rem;
+  }
+  .cart-products .item .item-content h5.cart-price {
+    font-weight: 700;
+  }
+  /*stye to btn close*/
+  p.close-btn {
+    top: -4px;
+    right: 6px;
+    cursor: pointer;
+    color: var(--darkpink);
+  }
+  .count-product {
+    position: absolute;
+    top: -12px;
+    left: 87%;
+  }
+  /* fin cart */
+  /* contacto */
+  .contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--grey);
+    padding-top: 2rem;
+  }
+  .ubicacion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ubicacion p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .callnumber {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .callnumber p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .contact img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+}
