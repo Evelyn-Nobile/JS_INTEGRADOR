@@ -12,6 +12,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Inconsolata";
+  overflow: auto;
 }
 
 :root {
