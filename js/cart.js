@@ -1,4 +1,3 @@
-//variables
 let allContainerCart = document.querySelector(".product");
 let containerBuyCart = document.querySelector(".card-items");
 let priceTotal = document.querySelector(".price-total");
@@ -8,9 +7,6 @@ let buyThings = [];
 let totalCard = 0;
 let countProduct = 0;
 
-
-
-//functions
 loadEventListenrs();
 function loadEventListenrs() {
   allContainerCart.addEventListener("click", addProduct);
@@ -41,7 +37,7 @@ function deleteProduct(e) {
 
     countProduct--;
   }
-  //contador
+
   if (buyThings.length === 0) {
     priceTotal.innerHTML = 0;
     amountProduct.innerHTML = 0;
@@ -110,13 +106,12 @@ function clearHtml() {
 
 function sincronizationStorage() {
   localStorage.setItem("cartProducts", JSON.stringify(buyThings));
- 
 }
 
 eventListeners();
 function eventListeners() {
   document.addEventListener("DOMContentLoaded", () => {
-    buyThings = JSON.parse(localStorage.getItem("cartProducts")) || [];   
+    buyThings = JSON.parse(localStorage.getItem("cartProducts")) || [];
     loadHtml();
   });
 }

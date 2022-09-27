@@ -1,4 +1,3 @@
-// data products
 const productsData = [
   {
     id: 1,
@@ -171,16 +170,12 @@ const productsData = [
   },
 ];
 
- 
 function splitProducts(size) {
-  
   let chunk = [];
-  
+
   for (let i = 0; i < productsData.length; i += size)
- 
     chunk.push(productsData.slice(i, i + size));
 
-  
   return chunk;
 }
 
