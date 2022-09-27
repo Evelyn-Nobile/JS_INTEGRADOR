@@ -221,11 +221,11 @@ p.close-btn {
 }
 .count-product {
   position: absolute;
-  top: 46%;
+  top: 48%;
   left: 67%;
   color: var(--darkpink);
   font-size: 1.2rem;
-}
+} 
 /* categorias */
 .container h3 {
   text-align: center;
