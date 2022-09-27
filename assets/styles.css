@@ -221,11 +221,10 @@ p.close-btn {
 }
 .count-product {
   position: absolute;
-  top: 45%;
+  top: 46%;
   left: 67%;
   color: var(--darkpink);
   font-size: 1.2rem;
- 
 }
 /* categorias */
 .container h3 {
@@ -310,7 +309,8 @@ p.close-btn {
   text-align: center;
   text-transform: uppercase;
 }
-.product__price, p {
+.product__price,
+p {
   color: var(--lightpink);
   font-weight: bold;
   font-size: 1.5rem;
@@ -523,7 +523,6 @@ about section */
   }
 
   .product,
-  .product_no-stock,
   .product_toggle {
     display: flex;
     flex-direction: column;
@@ -578,34 +577,6 @@ about section */
   .product_no-stock {
     cursor: not-allowed;
   }
-
-  /* toggle products
-  .product__btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-  }
-  .product__btn {
-    background-color: var(--lightpink);
-    color: var(--cream);
-    padding: 20px;
-    text-align: center;
-    font-size: 2rem;
-    font-family: "Inconsolata";
-    border-radius: 20px;
-  }
-  .product_toggle {
-    display:none;
-  }
-
-  .product_toggle.show {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  } */
 
   .contact h2 {
     text-align: center;
